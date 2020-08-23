@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+
+    commands: 
+      - echo installing dependencies...
+      - cd frontend && npm install
+
+  build:
+    commands:
+      - echo building package
+      - npm run build
+
+
+artifacts: 
+  files:
+    - "**/*"

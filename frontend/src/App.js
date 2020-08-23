@@ -9,6 +9,7 @@ function App() {
   const ec2Url = process.env.REACT_APP_EC2_URL;
 
  const handleEc2Click =async  ()=>{
+   console.log("hitting EC2...");
     const res = await axios.get(ec2Url);
     console.log("red",res);
 
